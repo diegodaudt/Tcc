@@ -2,6 +2,7 @@
   <head>
     <title>Rotas</title>
    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <style type="text/css" media="screen">
@@ -14,27 +15,28 @@
   </head>
   <body>
 
+
       <div class="pure-g">
 
-        <div class="pure-u-1-5" style="text-align:center;padding-top: 5%;">
+        <div class="pure-u-1 pure-u-md-1-4 pure-u-lg-1-5" style="text-align:center;padding-top: 5%;">
           <div class="pure-g" style="text-align: center;padding-left: 5%;">
            <form class="pure-form">
-                <fieldset class="pure-u-1-1">
+                <fieldset class="pure-u-1">
                   <div class="pure-g">
-                    <div class=pure-u-1-1>
-                      <legend class="pure-u-1-1">Lista de Pontos</legend>  
+                    <div class=pure-u-1>
+                      <legend class="pure-u-1">Lista de Pontos</legend>  
                     </div>
                   </div>
                   <div class="pure-g ponto">
-                    <div class="pure-u-4-4">
-                      <input type="text" name="ponto" placeholder="Ponto 1" class="pure-u-4-5">
-                      <button id="add-ponto" class="pure-button pure-button-primary pure-u-1-5">+</button>
+                    <div class="pure-u-md-4-4">
+                      <input type="text" name="ponto" placeholder="Ponto 1" class="pure-u-1-2 pure-u-sm-1 pure-u-md-4-5">
+                      <button id="add-ponto" class="pure-button pure-button-primary pure-u-1-2 pure-u-sm-1 pure-u-md-1-5">+</button>
                     </div>
                   </div>
                   <div class="pure-g ponto">
-                    <div clas="pure-u-4-4">
-                      <input type="text" name="ponto" placeholder="Ponto 2" class="pure-u-4-5">
-                      <button class="remove-ponto pure-button pure-button-primary pure-u-1-5">-</button>  
+                    <div clas="pure-u-md-4-4">
+                      <input type="text" name="ponto" placeholder="Ponto 2" class="pure-u-1-2 pure-u-sm-1 pure-u-md-4-5">
+                      <button class="remove-ponto pure-button pure-button-primary pure-u-1-2 pure-u-sm-1 pure-u-md-1-5">-</button>  
                     </div>
                   </div>
 
@@ -47,9 +49,9 @@
             </form>
           </div>
         </div>
-        <div class="pure-u-4-5" style="text-align:center;">
+        <div class="pure-u-1 pure-u-md-3-4 pure-u-lg-4-5" style="text-align:center;">
           <div class="pure-g">
-            <div class="pure-u-1-1">
+            <div class="pure-u-1">
               <div id="mapa"></div>
             </div>
           </div>
@@ -70,7 +72,7 @@
           total_pontos = $('[name="ponto"]').length;
           total_pontos++;
           console.log(total_pontos);
-          $("div .ponto").last().after('<div class="pure-g ponto"><div clas="pure-u-4-4"><input type="text" name="ponto" placeholder="Ponto '+total_pontos+'" class="pure-u-4-5"><button class="remove-ponto pure-button pure-button-primary pure-u-1-5">-</button></div></div>');
+          $("div .ponto").last().after('<div class="pure-g ponto"><div clas="pure-u-4-4"><input type="text" name="ponto" placeholder="Ponto '+total_pontos+'" class="pure-u-1 pure-u-md-4-5"><button class="remove-ponto pure-button pure-button-primary pure-u-1 pure-u-md-1-5">-</button></div></div>');
           event.preventDefault();
         });
 
